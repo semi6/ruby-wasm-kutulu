@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/ruby-head-wasm-wasi@latest/dist/browser.umd.js"></script>
+  <title></title>
+</head>
+<body>
+  <div class="container-sm p-5">
+    <div class="row align-items-start mb-2">
+      <h4>クトゥルフ神話TRPG キャラ作成ツール (第7版)</h4>
+    </div>
+    <div class="row align-items-start">
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-name">Name</span>
+              <input type="text" id="input-chara-name" class="form-control" aria-describedby="chara-name">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-player">Player</span>
+              <input type="text" id="input-chara-player" class="form-control" aria-describedby="chara-player">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-occupation">Occupation</span>
+              <input type="text" id="input-chara-occupation" class="form-control" aria-describedby="chara-occupation">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-age">Age</span>
+              <input type="text" id="input-chara-age" class="form-control" aria-describedby="chara-age">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-sex">Sex</span>
+              <input type="text" id="input-chara-sex" class="form-control" aria-describedby="chara-sex">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-residence">Residence</span>
+              <input type="text" id="input-chara-residence" class="form-control" aria-describedby="chara-residence">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-birthplace">Birthplace</span>
+              <input type="text" id="input-chara-birthplace" class="form-control" aria-describedby="chara-birthplace">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-str">STR</span>
+              <input type="text" id="input-chara-str" class="form-control" aria-describedby="chara-str">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-dex">DEX</span>
+              <input type="text" id="input-chara-dex" class="form-control" aria-describedby="chara-dex">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-pow">POW</span>
+              <input type="text" id="input-chara-pow" class="form-control" aria-describedby="chara-pow">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-con">CON</span>
+              <input type="text" id="input-chara-con" class="form-control" aria-describedby="chara-con">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-app">APP</span>
+              <input type="text" id="input-chara-app" class="form-control" aria-describedby="chara-app">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-edu">EDU</span>
+              <input type="text" id="input-chara-edu" class="form-control" aria-describedby="chara-edu">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-siz">SIZ</span>
+              <input type="text" id="input-chara-siz" class="form-control" aria-describedby="chara-siz">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-int">INT</span>
+              <input type="text" id="input-chara-int" class="form-control" aria-describedby="chara-int">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-mov">MOV</span>
+              <input type="text" id="input-chara-mov" class="form-control" aria-describedby="chara-mov">
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-db">DB</span>
+              <input type="text" id="input-chara-db" class="form-control" aria-describedby="chara-db">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-build">Build</span>
+              <input type="text" id="input-chara-build" class="form-control" aria-describedby="chara-build">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-dodge">Dodge</span>
+              <input type="text" id="input-chara-dodge" class="form-control" aria-describedby="chara-dodge">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-start">
+      <div class="col-10">
+        <div class="row">
+          <div class="col-2">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-hp">HP</span>
+              <input type="number" id="input-chara-hp" class="form-control" aria-describedby="chara-hp" min="-2" max="18" oninput="changeProgress('hp')">
+            </div>
+          </div>
+          <div class="col-8 py-1">
+            <div class="progress" style="height: 24px;">
+              <div id="progress-bar-chara-hp" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+            </div>
+            <input type="hidden" id="progress-bar-chara-hp-max" value="18">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-san">SAN</span>
+              <input type="number" id="input-chara-san" class="form-control" aria-describedby="chara-san" min="0" max="90" oninput="changeProgress('san')">
+            </div>
+          </div>
+          <div class="col-8 py-1">
+            <div class="progress" style="height: 24px;">
+              <div id="progress-bar-chara-san" class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 0%"></div>
+            </div>
+            <input type="hidden" id="progress-bar-chara-san-max" value="90">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-luc">LUC</span>
+              <input type="number" id="input-chara-luc" class="form-control" aria-describedby="chara-luc" min="0" max="90" oninput="changeProgress('luc')">
+            </div>
+          </div>
+          <div class="col-8 py-1">
+            <div class="progress" style="height: 24px;">
+              <div id="progress-bar-chara-luc" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 0%"></div>
+            </div>
+            <input type="hidden" id="progress-bar-chara-luc-max" value="90">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="chara-mp">MP</span>
+              <input type="number" id="input-chara-mp" class="form-control" aria-describedby="chara-mp" min="0" max="18" oninput="changeProgress('mp')">
+            </div>
+          </div>
+          <div class="col-8 py-1">
+            <div class="progress" style="height: 24px;">
+              <div id="progress-bar-chara-mp" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 0%"></div>
+            </div>
+            <input type="hidden" id="progress-bar-chara-mp-max" value="18">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-sm btn-primary my-3 px-3" onclick="main()">Run</button>
+  </div>
+  <script>
+    const { DefaultRubyVM } = window["ruby-wasm-wasi"];
+    const main = async () => {
+      const response = await fetch(
+        // "https://cdn.jsdelivr.net/npm/ruby-head-wasm-wasi@latest/dist/ruby.wasm"
+        '/wasm/kutulu.wasm'
+      )
+      const buffer = await response.arrayBuffer()
+      const module = await WebAssembly.compile(buffer)
+      const { vm } = await DefaultRubyVM(module)
+
+      const res = vm.eval(`
+        require '/src/kutulu'
+        require 'js'
+        Kutulu.generate
+      `)
+      const obj = JSON.parse(res.toString())
+      Object.keys(obj).forEach(key => {
+        if (obj[key]) {
+          const input = document.getElementById(`input-chara-${key}`)
+          if (input) {
+            input.value = obj[key]
+          }
+        }
+      })
+
+      changeProgress('hp')
+      changeProgress('san')
+      changeProgress('luc')
+      changeProgress('mp')
+    }
+
+    const changeProgress = (key) => {
+      const input = document.getElementById(`input-chara-${key}`)
+      const bar = document.getElementById(`progress-bar-chara-${key}`)
+      const max = document.getElementById(`progress-bar-chara-${key}-max`)
+      bar.style.width = `${input.value / max.value * 100}%`
+    }
+  </script>
+</body>
+</html>
